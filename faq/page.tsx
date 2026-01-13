@@ -133,58 +133,98 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "Do we have class today?",
+      name: "What is Hive of Thinkrs?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, unless we have communicated a change in advance. If you are unsure, feel free to check with us."
+        text: "Hive of Thinkrs is a creative learning lab where students from Kindergarten through 12th grade explore science, coding, math, and design through game-based, hands-on learning. Our programs help kids build real-world skills, confidence, and curiosity that last a lifetime. We also do Test Preparation for standardized, private school and college admissions tests such as SAT, ACT, SSAT and ISEE."
       }
     },
     {
       "@type": "Question",
-      name: "What days and times is the tutor available?",
+      name: "How is Hive of Thinkrs different from other tutoring or STEAM programs?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Tutor availability depends on the specific tutor and their current schedule. During the last week of each month, we reach out to confirm availability and finalize the schedule for the following month."
+        text: "We're not worksheets and lectures. We're invention, play, and problem-solving. Every lesson blends fun and learning — whether students are programming a robot, crafting a digital game, or leveling up in algebra."
       }
     },
     {
       "@type": "Question",
-      name: "How do we choose or confirm the tutoring schedule?",
+      name: "Do you offer online or in-person classes?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "At the end of each month, we coordinate with families to confirm the tutoring schedule for the upcoming month. This confirmed schedule is then used to generate the monthly invoice."
+        text: "Both. We offer flexible options to meet your family's needs — in-person at home or at one of our partner locations, or fully online with interactive tools like stylus tablets and digital dashboards."
       }
     },
     {
       "@type": "Question",
-      name: "Can we reschedule a tutoring session?",
+      name: "What ages or grades do you serve?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, sessions can be rescheduled with at least 24 hours' notice."
+        text: "We support students from Kindergarten to 12th grade across all academic levels — from early reading to college admissions."
       }
     },
     {
       "@type": "Question",
-      name: "What happens if we cancel the same day?",
+      name: "What kinds of programs do you offer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sessions canceled with less than 24 hours' notice are still charged, as the tutor has already reserved that time."
+        text: "Our core offerings include: STEAM Enrichment (Coding, Robotics, 3D Design, Game Development), Academic Tutoring (Math, Reading, Writing, Science), Test Prep (ISEE, SSAT, SAT, ACT), Study Smart (Executive Functioning & Time Management)"
       }
     },
     {
       "@type": "Question",
-      name: "What does my invoice include?",
+      name: "How does your Test Prep work?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Your invoice includes all tutoring sessions scheduled and confirmed for the month, based on the schedule agreed upon at the end of the previous month."
+        text: "We start with a diagnostic and build a personalized plan based on each student's goals. Our approach includes subject-specific tutoring, homework, vocabulary training, and proctored practice tests. Students typically improve their SAT score by 200+ points and ACT by 7–10 points."
       }
     },
     {
       "@type": "Question",
-      name: "When is the invoice sent?",
+      name: "Do you provide practice tests?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Invoices are usually sent at the beginning of each month, once the monthly schedule has been finalized."
+        text: "Yes. We run monthly proctored SAT, ACT, ISEE, and SSAT practice exams to simulate real test conditions and adjust learning plans accordingly."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Who are your instructors?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our team includes experienced, background-checked professionals with STEM or education degrees. Many also teach advanced learners during the school year at top schools in Miami."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What types of after-school programs can we bring to our school?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We offer custom STEAM and academic programs for K–12. From robotics and coding to creative design and executive functioning, our after-school options are hands-on, turnkey, and beloved by students."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide instructors and materials?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We handle the full experience — instructors, curriculum, tech materials, and student engagement. Think of us as your enrichment partner, not just a vendor."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What's the first step to bring Hive of Thinkrs to our school?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Reach out to us at yourhive@beathinkr.com or call 305-668-0605. We'll start with a discovery consultation to understand your needs and design a custom plan for your community."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How do I enroll my child?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Click here and fill out the form. We'll set up a brief call to match you with the right program and instructor."
       }
     },
     {
