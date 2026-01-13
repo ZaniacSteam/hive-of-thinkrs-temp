@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Questions | Hive of Thinkrs Miami</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .faq-hero {
+        background: linear-gradient(135deg, #7140FF 0%, #12D0EE 100%);
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
+      }
+      
+      .faq-hero h1 {
+        font-size: 3.5rem;
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+      }
+      
+      .faq-hero p {
+        font-size: 1.5rem;
+        max-width: 800px;
+        margin: 0 auto;
+        opacity: 0.9;
+      }
+      
+      .quick-links {
+        background: #F9FAFB;
+        padding: 60px 20px;
+      }
+      
+      .quick-links h2 {
+        text-align: center;
+        font-size: 2rem;
+        color: #374151;
+        margin-bottom: 2rem;
+      }
+      
+      .quick-links-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+      
+      .btn {
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.2s;
+        display: inline-block;
+      }
+      
+      .btn-primary {
+        background: #7140FF;
+        color: white;
+      }
+      
+      .btn-primary:hover {
+        background: #5A2FD8;
+      }
+      
+      .btn-secondary {
+        background: #12D0EE;
+        color: white;
+      }
+      
+      .btn-secondary:hover {
+        background: #0BA5D0;
+      }
+      
+      .btn-tertiary {
+        background: #F355CC;
+        color: white;
+      }
+      
+      .btn-tertiary:hover {
+        background: #D944B8;
+      }
+      
+      .faq-section {
+        padding: 80px 20px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      
+      .faq-category {
+        margin-bottom: 60px;
+      }
+      
+      .faq-category-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+      
+      .faq-category-icon {
+        font-size: 2rem;
+        margin-right: 12px;
+      }
+      
+      .faq-category-title {
+        font-size: 2rem;
+        color: #374151;
+        font-weight: 500;
+      }
+      
+      .faq-item {
+        border: 1px solid #E5E7EB;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 16px;
+        transition: all 0.3s;
+      }
+      
+      .faq-item:hover {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      
+      .faq-question {
+        width: 100%;
+        padding: 20px 24px;
+        background: white;
+        border: none;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      
+      .faq-question:hover {
+        background: #F9FAFB;
+      }
+      
+      .faq-question-text {
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: #374151;
+        padding-right: 16px;
+      }
+      
+      .faq-icon {
+        width: 24px;
+        height: 24px;
+        color: #7140FF;
+        transition: transform 0.2s;
+        flex-shrink: 0;
+      }
+      
+      .faq-icon.open {
+        transform: rotate(180deg);
+      }
+      
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+      }
+      
+      .faq-answer.open {
+        max-height: 400px;
+        opacity: 1;
+      }
+      
+      .faq-answer-content {
+        padding: 20px 24px;
+        background: #F9FAFB;
+        color: #6B7280;
+        line-height: 1.6;
+      }
+      
+      .cta-section {
+        background: linear-gradient(90deg, #7140FF 0%, #12D0EE 100%);
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
+      }
+      
+      .cta-section h2 {
+        font-size: 2.5rem;
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+      }
+      
+      .cta-section p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+      
+      .cta-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+      }
+      
+      .btn-white {
+        background: white;
+        color: #7140FF;
+      }
+      
+      .btn-white:hover {
+        background: #F3F4F6;
+      }
+      
+      .btn-outline {
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+      }
+      
+      .btn-outline:hover {
+        background: white;
+        color: #7140FF;
+      }
+      
+      .resources-section {
+        background: #F9FAFB;
+        padding: 80px 20px;
+      }
+      
+      .resources-section h2 {
+        text-align: center;
+        font-size: 2rem;
+        color: #374151;
+        margin-bottom: 3rem;
+      }
+      
+      .resources-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .resource-card {
+        text-align: center;
+      }
+      
+      .resource-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+      }
+      
+      .resource-icon.purple {
+        background: #7140FF;
+        color: white;
+      }
+      
+      .resource-icon.blue {
+        background: #12D0EE;
+        color: white;
+      }
+      
+      .resource-icon.pink {
+        background: #F355CC;
+        color: white;
+      }
+      
+      .resource-card h3 {
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: #374151;
+        margin-bottom: 1rem;
+      }
+      
+      .resource-card p {
+        color: #6B7280;
+        margin-bottom: 1rem;
+      }
+      
+      .resource-link {
+        font-weight: 500;
+        text-decoration: none;
+      }
+      
+      .link-purple {
+        color: #7140FF;
+      }
+      
+      .link-purple:hover {
+        color: #5A2FD8;
+      }
+      
+      .link-blue {
+        color: #12D0EE;
+      }
+      
+      .link-blue:hover {
+        color: #0BA5D0;
+      }
+      
+      .link-pink {
+        color: #F355CC;
+      }
+      
+      .link-pink:hover {
+        color: #D944B8;
+      }
+      
+      @media (max-width: 768px) {
+        .faq-hero h1 {
+          font-size: 2.5rem;
+        }
+        
+        .faq-hero p {
+          font-size: 1.25rem;
+        }
+        
+        .faq-category-title {
+          font-size: 1.5rem;
+        }
+        
+        .cta-section h2 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="faq-hero">
+      <h1>Frequently Asked Questions</h1>
+      <p>Find answers to common questions about our STEM programs, enrollment, and how we help your child thrive</p>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="quick-links">
+      <div class="max-w-7xl" style="margin: 0 auto;">
+        <h2>Quick Links</h2>
+        <div class="quick-links-buttons">
+          <a href="#courses" class="btn btn-primary">View All Courses</a>
+          <a href="#enroll" class="btn btn-secondary">Enroll Now</a>
+          <a href="#about" class="btn btn-tertiary">About Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="faq-section">
+      <div id="faq-categories"></div>
+    </section>
+
+    <!-- Still Have Questions CTA -->
+    <section class="cta-section">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h2>Still Have Questions?</h2>
+        <p>We're here to help! Contact our team and we'll be happy to answer any additional questions you may have.</p>
+        <div class="cta-buttons">
+          <a href="#contact" class="btn btn-white">Get in Touch</a>
+          <a href="tel:305-668-0605" class="btn btn-outline">Call (305) 668-0605</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Resources -->
+    <section class="resources-section">
+      <div style="max-width: 1200px; margin: 0 auto;">
+        <h2>Additional Resources</h2>
+        <div class="resources-grid">
+          <div class="resource-card">
+            <div class="resource-icon purple">
+              <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <h3>Program Guide</h3>
+            <p>Download our complete program guide with detailed curriculum information</p>
+            <a href="#guide" class="resource-link link-purple">Download PDF →</a>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon blue">
+              <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3>Schedule a Tour</h3>
+            <p>Visit our facility and see our programs in action</p>
+            <a href="#tour" class="resource-link link-blue">Schedule Visit →</a>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon pink">
+              <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+              </svg>
+            </div>
+            <h3>Parent Portal</h3>
+            <p>Access your child's progress, schedules, and updates</p>
+            <a href="#portal" class="resource-link link-pink">Login to Portal →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // FAQ data organized by category
+      const faqCategories = [
+        {
+          title: "General Information",
+          icon: "📚",
+          questions: [
+            {
+              q: "What age groups do you serve at Hive of Thinkrs?",
+              a: "We serve K-12 students from ages 5 through 18. Our programs are designed with age-appropriate curriculum and activities for elementary, middle, and high school students."
+            },
+            {
+              q: "Where are your STEM programs located in Miami?",
+              a: "We offer programs throughout Miami-Dade County. Our main location serves the Miami area, and we also partner with local schools for in-school programs. Contact us to find the nearest location to you."
+            },
+            {
+              q: "What types of STEM programs do you offer?",
+              a: "We offer comprehensive STEM programs including: Coding (Python, JavaScript, web development), Robotics, Engineering, Minecraft Education, Math Enrichment, Art & Design, and Test Prep (SAT, ACT, ISEE, SSAT). Programs are available as after-school classes, in-school partnerships, summer camps, and private tutoring."
+            }
+          ]
+        },
+        {
+          title: "Enrollment & Pricing",
+          icon: "💰",
+          questions: [
+            {
+              q: "How much do your programs cost?",
+              a: "Our pricing varies by program type and duration. After-school programs typically range from $150-300 per month, summer camps are $300-500 per week, and private tutoring starts at $60 per hour. We offer sibling discounts and payment plans. Contact us for specific program pricing."
+            },
+            {
+              q: "Do you offer free trials or demo classes?",
+              a: "Yes! We offer free trial classes for new students to experience our teaching style and curriculum. Contact us to schedule a trial class for your child."
+            },
+            {
+              q: "Do you offer scholarships or financial aid?",
+              a: "We believe every child deserves access to quality STEM education. We offer limited scholarships and financial aid based on need and availability. Contact us to learn more about our financial assistance programs."
+            },
+            {
+              q: "What is your cancellation policy?",
+              a: "We offer flexible cancellation policies. For after-school programs, we require 30 days notice. For summer camps, cancellations made 14 days before start receive a full refund minus a $50 processing fee. For private tutoring, 24 hours' notice is required for cancellations or rescheduling."
+            }
+          ]
+        },
+        {
+          title: "Private Tutoring - Scheduling",
+          icon: "📅",
+          questions: [
+            {
+              q: "Do we have class today?",
+              a: "Yes, unless we have communicated a change in advance. If you are unsure, feel free to check with us."
+            },
+            {
+              q: "What days and times is the tutor available?",
+              a: "Tutor availability depends on the specific tutor and their current schedule. During the last week of each month, we reach out to confirm availability and finalize the schedule for the following month."
+            },
+            {
+              q: "How do we choose or confirm the tutoring schedule?",
+              a: "At the end of each month, we coordinate with families to confirm the tutoring schedule for the upcoming month. This confirmed schedule is then used to generate the monthly invoice."
+            },
+            {
+              q: "Can we change the regular day or time of a session?",
+              a: "Yes, changes are possible depending on tutor availability. Permanent schedule changes must be requested before the monthly schedule is finalized."
+            }
+          ]
+        },
+        {
+          title: "Private Tutoring - Cancellations & Rescheduling",
+          icon: "🔄",
+          questions: [
+            {
+              q: "Can we reschedule a tutoring session?",
+              a: "Yes, sessions can be rescheduled with at least 24 hours' notice."
+            },
+            {
+              q: "How much notice is needed to reschedule or cancel?",
+              a: "A minimum of 24 hours' notice is required. Requests made with less notice are considered same-day cancellations."
+            },
+            {
+              q: "What happens if we cancel the same day?",
+              a: "Sessions canceled with less than 24 hours' notice are still charged, as the tutor has already reserved that time."
+            },
+            {
+              q: "What happens if we are traveling and can't attend a session?",
+              a: "The same cancellation and rescheduling policy applies. Sessions must be adjusted with at least 24 hours' notice to avoid being charged."
+            },
+            {
+              q: "Can we skip a week of tutoring?",
+              a: "Yes, as long as we are notified with at least 24 hours' notice for each affected session."
+            }
+          ]
+        },
+        {
+          title: "Private Tutoring - Billing",
+          icon: "💳",
+          questions: [
+            {
+              q: "What does my invoice include?",
+              a: "Your invoice includes all tutoring sessions scheduled and confirmed for the month, based on the schedule agreed upon at the end of the previous month."
+            },
+            {
+              q: "Why am I being charged this amount?",
+              a: "The total reflects the number of sessions scheduled for the month, each corresponding to reserved tutoring time."
+            },
+            {
+              q: "When is the invoice sent?",
+              a: "Invoices are usually sent at the beginning of each month, once the monthly schedule has been finalized."
+            },
+            {
+              q: "What happens if a paid session cannot be rescheduled?",
+              a: "If a session was scheduled and paid for but cannot be rescheduled due to limited availability, the amount will be automatically applied as a credit toward the next invoice."
+            },
+            {
+              q: "Can you resend my invoice?",
+              a: "Yes. Invoices are sent from yourhive@beathinkr.com. We recommend checking spam or promotions folders as well."
+            }
+          ]
+        },
+        {
+          title: "Program Details",
+          icon: "🔬",
+          questions: [
+            {
+              q: "What is your student-to-teacher ratio?",
+              a: "We maintain small class sizes with a maximum of 8:1 student-to-teacher ratio for most programs. This ensures personalized attention and hands-on learning for every student."
+            },
+            {
+              q: "What makes your teaching approach different?",
+              a: "We use game-based, hands-on learning that makes STEM education fun and engaging. Our curriculum focuses on building critical thinking and problem-solving skills through real-world projects. Students learn by doing, not just listening."
+            },
+            {
+              q: "Do students need prior experience for coding or robotics classes?",
+              a: "No prior experience is necessary! Our programs are designed for beginners through advanced students. We assess each child's skill level and place them in appropriate groups. Our instructors adapt teaching methods to match each student's experience level."
+            },
+            {
+              q: "What equipment or materials do students need?",
+              a: "We provide all necessary equipment and materials for in-person programs, including computers, robotics kits, and software. For online programs, we provide a list of required materials and help parents set up the necessary software at home."
+            }
+          ]
+        },
+        {
+          title: "Logistics & Safety",
+          icon: "🛡️",
+          questions: [
+            {
+              q: "Do you provide transportation for after-school programs?",
+              a: "Transportation options vary by location. Some of our partner schools provide transportation from school to our center. Contact us to discuss transportation options for your specific location."
+            },
+            {
+              q: "What safety measures do you have in place?",
+              a: "Student safety is our top priority. All instructors undergo background checks, we maintain proper student-to-teacher ratios, our facilities are secure, and we follow all CDC and local health guidelines. Parents receive regular updates and can contact us during program hours."
+            },
+            {
+              q: "How do you track student progress?",
+              a: "We provide regular progress reports to parents, including skill assessments, project completion, and recommendations for next steps. Parents receive quarterly reports and can schedule conferences with instructors to discuss their child's progress."
+            }
+          ]
+        },
+        {
+          title: "Getting Started",
+          icon: "🚀",
+          questions: [
+            {
+              q: "How do I enroll my child in a program?",
+              a: "Enrollment is easy! You can start by filling out our online request form on our website, calling us at (305) 668-0605, or visiting our center. We'll help you choose the right program and complete the registration process."
+            }
+          ]
+        }
+      ];
+
+      // Function to create FAQ HTML
+      function createFAQHTML() {
+        const container = document.getElementById('faq-categories');
+        
+        faqCategories.forEach((category, categoryIndex) => {
+          const categoryDiv = document.createElement('div');
+          categoryDiv.className = 'faq-category';
+          
+          const headerDiv = document.createElement('div');
+          headerDiv.className = 'faq-category-header';
+          
+          const icon = document.createElement('span');
+          icon.className = 'faq-category-icon';
+          icon.textContent = category.icon;
+          
+          const title = document.createElement('h2');
+          title.className = 'faq-category-title';
+          title.textContent = category.title;
+          
+          headerDiv.appendChild(icon);
+          headerDiv.appendChild(title);
+          categoryDiv.appendChild(headerDiv);
+          
+          category.questions.forEach((faq, faqIndex) => {
+            const faqItem = document.createElement('div');
+            faqItem.className = 'faq-item';
+            
+            const question = document.createElement('button');
+            question.className = 'faq-question';
+            question.innerHTML = `
+              <span class="faq-question-text">${faq.q}</span>
+              <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            `;
+            
+            const answer = document.createElement('div');
+            answer.className = 'faq-answer';
+            answer.innerHTML = `<div class="faq-answer-content">${faq.a}</div>`;
+            
+            question.addEventListener('click', function() {
+              const isOpen = answer.classList.contains('open');
+              const icon = question.querySelector('.faq-icon');
+              
+              // Close all other FAQs in the same category
+              categoryDiv.querySelectorAll('.faq-answer').forEach(a => {
+                a.classList.remove('open');
+              });
+              categoryDiv.querySelectorAll('.faq-icon').forEach(i => {
+                i.classList.remove('open');
+              });
+              
+              // Open this FAQ if it was closed
+              if (!isOpen) {
+                answer.classList.add('open');
+                icon.classList.add('open');
+              }
+            });
+            
+            faqItem.appendChild(question);
+            faqItem.appendChild(answer);
+            categoryDiv.appendChild(faqItem);
+          });
+          
+          container.appendChild(categoryDiv);
+        });
+      }
+
+      // Initialize FAQ when DOM is loaded
+      document.addEventListener('DOMContentLoaded', createFAQHTML);
+    </script>
+  </body>
+</html>

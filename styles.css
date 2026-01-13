@@ -48,6 +48,7 @@ body, html {
 
 .coming-soon,
 .main-title,
+.nav-buttons,
 .footer-text {
   position: relative;
   z-index: 2;
@@ -73,6 +74,27 @@ body, html {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   letter-spacing: -1px;
   line-height: 1.1;
+}
+
+.nav-buttons {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.faq-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #7140FF 0%, #12D0EE 100%);
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.faq-button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #5A2FD8 0%, #0BA5D0 100%);
 }
 
 .footer-text {
