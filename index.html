@@ -9,7 +9,32 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-  </head>
+    <style>
+      @font-face {
+        font-family: 'GT Cinetype';
+        src: url('GT Cinetype/GT-Cinetype-Regular.woff2') format('woff2'),
+             url('GT Cinetype/GT-Cinetype-Regular.woff') format('woff'),
+             url('GT Cinetype/GT-Cinetype-Regular.ttf') format('truetype');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+      }
+      
+      @font-face {
+        font-family: 'GT Cinetype';
+        src: url('GT Cinetype/GT-Cinetype-Bold.woff2') format('woff2'),
+             url('GT Cinetype/GT-Cinetype-Bold.woff') format('woff'),
+             url('GT Cinetype/GT-Cinetype-Bold.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+      
+      body, html {
+        height: 100%;
+        font-family: 'GT Cinetype', sans-serif;
+      }
+    </style>
   <body>
     <div class="container">
 
@@ -18,6 +43,7 @@
       </div>
             
       <div class="nav-buttons">
+        <a href="blog.html" class="faq-button">Blog</a>
         <a href="faq.html" class="faq-button">FAQ Page</a>
       </div>
     </div>

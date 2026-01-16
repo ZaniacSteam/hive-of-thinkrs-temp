@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STEM Education Blog | Hive of Thinkrs Miami</title>
+    <meta name="description" content="Expert insights on STEM education, coding for kids, robotics, and educational technology. Discover tips, resources, and success stories from Miami's premier STEM education center." />
+    <meta name="keywords" content="STEM education blog, coding for kids Miami, robotics education, math enrichment, educational technology" />
+    
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @font-face {
+        font-family: 'GT Cinetype';
+        src: url('GT Cinetype/GT-Cinetype-Regular.woff2') format('woff2'),
+             url('GT Cinetype/GT-Cinetype-Regular.woff') format('woff'),
+             url('GT Cinetype/GT-Cinetype-Regular.ttf') format('truetype');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+      }
+      
+      @font-face {
+        font-family: 'GT Cinetype';
+        src: url('GT Cinetype/GT-Cinetype-Bold.woff2') format('woff2'),
+             url('GT Cinetype/GT-Cinetype-Bold.woff') format('woff'),
+             url('GT Cinetype/GT-Cinetype-Bold.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+    
+      /* Blog-specific styles */
+      .blog-container {
+        min-height: 100vh;
+        background: #F9FAFB;
+        font-family: 'GT Cinetype', sans-serif;
+      }
+
+      .content-wrapper {
+        max-width: 80rem;
+        margin: 0 auto;
+      }
+
+      .blog-header {
+        color: #333;
+        text-align: left;
+        padding: 40px 20px;
+        margin-bottom: 40px;
+      }
+
+      .blog-header h1 {
+        font-size: 3rem;
+        font-weight: 300;
+        margin-bottom: 20px;
+        text-shadow: none;
+        background-color: #089ED4;
+        color: white;
+        display: inline-block;
+        padding: 10px 20px;
+      }
+
+      .blog-header p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 0 15px 0;
+        opacity: 0.9;
+        color: #7140FF;
+        font-weight: 300;
+      }
+
+      .blog-header-description {
+        font-size: 1rem;
+        max-width: 700px;
+        margin: 0 0 0 0;
+        opacity: 0.8;
+        color: #7140FF;
+        font-weight: 300;
+      }
+
+      .blog-header p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 0 15px 0;
+        opacity: 0.9;
+        color: #7140FF;
+        font-weight: 300;
+      }
+
+      .blog-content {
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 40px 20px;
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 40px;
+      }
+
+      .blog-posts-section {
+        flex: 1;
+      }
+
+      .blog-section-title {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 30px;
+      }
+
+      .blog-posts {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .blog-post-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      .blog-post-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .blog-post-image {
+        width: 300px;
+        height: auto;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+
+      .blog-post-content {
+        padding: 25px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .blog-post-meta {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      .blog-category {
+        background: linear-gradient(135deg, #7140FF 0%, #12D0EE 100%);
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+
+      .blog-post-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 15px;
+        line-height: 1.3;
+      }
+
+      .blog-post-title a {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.3s ease;
+      }
+
+      .blog-post-title a:hover {
+        color: #7140FF;
+      }
+
+      .blog-post-excerpt {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .blog-post-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+
+      .blog-tag {
+        background: #f3f4f6;
+        color: #666;
+        padding: 4px 10px;
+        border-radius: 15px;
+        font-size: 0.8rem;
+      }
+
+      .blog-read-more {
+        display: inline-flex;
+        align-items: center;
+        color: #7140FF;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .blog-read-more:hover {
+        color: #5A2FD8;
+      }
+
+      .blog-read-more svg {
+        margin-left: 5px;
+        transition: transform 0.3s ease;
+      }
+
+      .blog-read-more:hover svg {
+        transform: translateX(3px);
+      }
+
+      .blog-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .blog-sidebar-section {
+        background: white;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .blog-sidebar-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .blog-recent-posts {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .blog-recent-post {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .blog-recent-post:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .blog-recent-post-title {
+        font-weight: 500;
+        color: #333;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 5px;
+        transition: color 0.3s ease;
+      }
+
+      .blog-recent-post-title:hover {
+        color: #7140FF;
+      }
+
+      .blog-recent-post-date {
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      .blog-categories {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .blog-category-link {
+        padding: 10px 15px;
+        background: #f8f9ff;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #333;
+        transition: background 0.3s ease, color 0.3s ease;
+      }
+
+      .blog-category-link:hover {
+        background: linear-gradient(135deg, #7140FF 0%, #12D0EE 100%);
+        color: white;
+      }
+
+      
+      .blog-newsletter {
+        background: linear-gradient(135deg, #7140FF 0%, #12D0EE 100%);
+        color: white;
+        text-align: center;
+      }
+
+      .blog-newsletter h3 {
+        margin-bottom: 10px;
+      }
+
+      .blog-newsletter p {
+        margin-bottom: 20px;
+        opacity: 0.9;
+      }
+
+      .blog-newsletter-button {
+        display: inline-block;
+        background: white;
+        color: #7140FF;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.3s ease;
+      }
+
+      .blog-newsletter-button:hover {
+        background: #f8f9ff;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .blog-header h1 {
+          font-size: 2rem;
+        }
+
+        .blog-content {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+
+        .blog-post-card {
+          flex-direction: column;
+        }
+
+        .blog-post-image {
+          width: 100%;
+          height: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blog-container">
+      <div class="content-wrapper">
+      <!-- Header -->
+      <header class="blog-header">
+        <h1>STEM Education Blog</h1>
+        <p>Expert insights, tips, and resources for parents and educators</p>
+        <p class="blog-header-description">Discover the latest in STEM education, coding for kids, robotics, and educational technology from Miami's premier learning center.</p>
+      </header>
+
+      <!-- Main Content -->
+      <main class="blog-content">
+        <!-- Blog Posts -->
+        <section class="blog-posts-section">
+          <h2 class="blog-section-title">Latest Articles</h2>
+          <div class="blog-posts" id="blogPosts">
+            <!-- Blog posts will be dynamically loaded here -->
+          </div>
+        </section>
+
+        <!-- Sidebar -->
+        <aside class="blog-sidebar">
+          <!-- Recent Posts -->
+          <div class="blog-sidebar-section">
+            <h3 class="blog-sidebar-title">Recent Posts</h3>
+            <div class="blog-recent-posts" id="recentPosts">
+              <!-- Recent posts will be dynamically loaded here -->
+            </div>
+          </div>
+
+          <!-- Categories -->
+          <div class="blog-sidebar-section">
+            <h3 class="blog-sidebar-title">Categories</h3>
+            <div class="blog-categories" id="categories">
+              <!-- Categories will be dynamically loaded here -->
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="blog-sidebar-section blog-newsletter">
+            <h3>Stay Updated</h3>
+            <p>Get the latest STEM education insights delivered to your inbox.</p>
+            <a href="faq.html" class="blog-newsletter-button">Subscribe Now</a>
+          </div>
+        </aside>
+      </main>
+      </div>
+    </div>
+
+    <!-- Blog Data and JavaScript -->
+    <script src="blog/data/blog.js"></script>
+    <script>
+      // Utility functions
+      function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-US', { 
+          year: 'numeric', 
+          month: 'long', 
+          day: 'numeric' 
+        });
+      }
+
+      function formatDateShort(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-US', { 
+          month: 'short', 
+          day: 'numeric', 
+          year: 'numeric' 
+        });
+      }
+
+      function createBlogPostCard(post) {
+        return `
+          <article class="blog-post-card">
+            <img src="${post.featuredImage}" alt="${post.title}" class="blog-post-image" />
+            <div class="blog-post-content">
+              <div class="blog-post-meta">
+                <span class="blog-category">${post.category}</span>
+                <time datetime="${post.publishDate}">${formatDate(post.publishDate)}</time>
+              </div>
+              
+              <h2 class="blog-post-title">
+                <a href="blog-post.html?slug=${post.slug}">${post.title}</a>
+              </h2>
+              
+              <p class="blog-post-excerpt">${post.excerpt}</p>
+              
+              <div class="blog-post-tags">
+                ${post.tags.slice(0, 3).map(tag => `<span class="blog-tag">#${tag}</span>`).join('')}
+              </div>
+              
+              <a href="blog-post.html?slug=${post.slug}" class="blog-read-more">
+                Read More
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </article>
+        `;
+      }
+
+      function createRecentPostCard(post) {
+        return `
+          <div class="blog-recent-post">
+            <a href="blog-post.html?slug=${post.slug}" class="blog-recent-post-title">${post.title}</a>
+            <div class="blog-recent-post-date">${formatDateShort(post.publishDate)}</div>
+          </div>
+        `;
+      }
+
+      function createCategoryLink(category) {
+        return `
+          <a href="blog-category.html?category=${category.slug}" class="blog-category-link">
+            ${category.name}
+          </a>
+        `;
+      }
+
+      // Initialize blog page
+      function initializeBlog() {
+        const posts = getBlogPosts();
+        const recentPosts = getRecentPosts(3);
+        
+        // Load blog posts
+        const blogPostsContainer = document.getElementById('blogPosts');
+        blogPostsContainer.innerHTML = posts.map(post => createBlogPostCard(post)).join('');
+        
+        // Load recent posts
+        const recentPostsContainer = document.getElementById('recentPosts');
+        recentPostsContainer.innerHTML = recentPosts.map(post => createRecentPostCard(post)).join('');
+        
+        // Load categories
+        const categoriesContainer = document.getElementById('categories');
+        categoriesContainer.innerHTML = categories.map(category => createCategoryLink(category)).join('');
+      }
+
+      // Initialize when DOM is loaded
+      document.addEventListener('DOMContentLoaded', initializeBlog);
+    </script>
+  </body>
+</html>
