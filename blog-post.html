@@ -110,20 +110,41 @@
         gap: 10px;
         font-size: 0.9rem;
         color: #666;
+        flex-wrap: nowrap;
       }
 
       .breadcrumb a {
-        color: #666;
+        color: white;
+        font-size: 1.5rem;
+        background: #089ED4;
         text-decoration: none;
+        padding: 5px 10px;
         transition: color 0.3s ease;
-      }
-
-      .breadcrumb a:hover {
-        color: #7140FF;
+        z-index: 99999;
+        white-space: nowrap;
+        flex-shrink: 0;
       }
 
       .breadcrumb-separator {
         color: #999;
+        flex-shrink: 0;
+      }
+
+      @media (max-width: 600px) {
+        .breadcrumb {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 5px;
+        }
+        
+        .breadcrumb a {
+          /* width: 100%; */
+          box-sizing: border-box;
+        }
+        
+        .breadcrumb-separator {
+          display: none;
+        }
       }
 
       .blog-post-content {
@@ -134,7 +155,6 @@
 
       .blog-post-header {
         background: white;
-        border-radius: 12px;
         padding: 40px;
         margin-bottom: 30px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -150,10 +170,9 @@
       }
 
       .blog-post-category {
-        background: linear-gradient(135deg, #7140FF 0%, #12D0EE 100%);
+        background: #7140FF;
         color: white;
         padding: 6px 16px;
-        border-radius: 20px;
         font-size: 0.8rem;
         font-weight: 500;
       }
@@ -177,7 +196,6 @@
         width: 100%;
         height: 400px;
         object-fit: cover;
-        border-radius: 12px;
         margin-bottom: 30px;
       }
 
@@ -191,13 +209,11 @@
         background: #f3f4f6;
         color: #666;
         padding: 6px 14px;
-        border-radius: 20px;
         font-size: 0.9rem;
       }
 
       .blog-post-article {
         background: white;
-        border-radius: 12px;
         padding: 40px;
         margin-bottom: 30px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -245,9 +261,8 @@
       }
 
       .blog-post-newsletter {
-        background: linear-gradient(135deg, #7140FF 0%, #12D0EE 100%);
+        background: #7140FF;
         color: white;
-        border-radius: 12px;
         padding: 40px;
         text-align: center;
         margin-bottom: 30px;
@@ -269,7 +284,6 @@
         background: white;
         color: #7140FF;
         padding: 15px 30px;
-        border-radius: 8px;
         text-decoration: none;
         font-weight: 600;
         transition: background 0.3s ease;
@@ -281,7 +295,6 @@
 
       .blog-post-related {
         background: white;
-        border-radius: 12px;
         padding: 40px;
         margin-bottom: 30px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -301,7 +314,6 @@
 
       .blog-post-related-card {
         border: 1px solid #e5e7eb;
-        border-radius: 8px;
         overflow: hidden;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
@@ -371,7 +383,6 @@
 
       .blog-post-error {
         background: white;
-        border-radius: 12px;
         padding: 60px 40px;
         text-align: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -390,10 +401,9 @@
 
       .blog-post-error-button {
         display: inline-block;
-        background: linear-gradient(135deg, #7140FF 0%, #12D0EE 100%);
+        background: #7140FF;
         color: white;
         padding: 12px 24px;
-        border-radius: 8px;
         text-decoration: none;
         font-weight: 600;
         transition: opacity 0.3s ease;
@@ -433,28 +443,13 @@
   </head>
   <body>
     <div class="blog-post-container">
-      <!-- Navigation -->
-      <nav class="blog-post-nav">
-        <div class="blog-post-nav-content">
-          <a href="index.html" class="blog-post-logo">
-            <img src="logo.png" alt="Hive of Thinkrs" />
-            Hive of Thinkrs
-          </a>
-          <div class="blog-post-nav-links">
-            <a href="index.html">Home</a>
-            <a href="blog.html">Blog</a>
-            <a href="faq.html">FAQ</a>
-          </div>
-        </div>
-      </nav>
+
 
       <!-- Breadcrumb -->
       <div class="blog-post-breadcrumb">
         <div class="blog-post-breadcrumb-content">
           <nav class="breadcrumb">
-            <a href="index.html">Home</a>
-            <span class="breadcrumb-separator">›</span>
-            <a href="blog.html">Blog</a>
+            <a href="blog.html">Thinkr Learning Hub</a>
             <span class="breadcrumb-separator">›</span>
             <span id="breadcrumbTitle">Loading...</span>
           </nav>
