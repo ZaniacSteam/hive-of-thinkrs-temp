@@ -44,43 +44,54 @@
       }
 
       .blog-category-header {
-        background: #7140FF;
-        color: white;
-        padding: 80px 20px;
+        /* padding: 80px 20px; */
         text-align: center;
+        margin: 0 auto;
+      }
+
+      .blog-category-header-content {
+        max-width: 1024px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
       }
 
       .blog-category-header h1 {
+        display: inline-block;
+        text-align: left;
         font-size: 3rem;
-        font-weight: 700;
+        font-weight: 300;
         margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        color: white;
+        background: #089ED4;
+        padding: 10px;
+        flex-shrink: 0;
       }
 
       .blog-category-header p {
         font-size: 1.2rem;
         max-width: 600px;
-        margin: 0 auto;
+        margin: 0;
         opacity: 0.9;
+        color: #7140FF;
       }
 
       .blog-category-nav {
-        background: white;
-        padding: 15px 0;
-        border-bottom: 1px solid #e5e7eb;
+        padding: 20px 0;
         position: sticky;
         top: 0;
         z-index: 100;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
 
       .blog-category-nav-content {
-        max-width: 1200px;
+        max-width: 1024px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 20px;
+        /* padding: 0 10px; */
       }
 
       .blog-category-logo {
@@ -102,15 +113,23 @@
       }
 
       .blog-category-nav-links a {
+        color: white;
+        font-size: 1.5rem;
+        background: #089ED4;
         text-decoration: none;
-        color: #666;
-        font-weight: 500;
-        transition: color 0.3s ease;
+        padding: 5px 10px;
+        transition: all 0.3s ease;
+        z-index: 99999;
+        white-space: nowrap;
+        flex-shrink: 0;
+        
       }
 
       .blog-category-nav-links a:hover {
-        color: #7140FF;
+        background-color: #12D0EE;
       }
+
+  
 
       .blog-category-breadcrumb {
         background: white;
@@ -147,9 +166,8 @@
       }
 
       .blog-category-content {
-        max-width: 1200px;
+        max-width: 1024px;
         margin: 0 auto;
-        padding: 40px 20px;
       }
 
       .blog-category-info {
@@ -172,7 +190,7 @@
 
       .blog-category-posts {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        grid-template-columns: 1fr;
         gap: 30px;
       }
 
@@ -181,6 +199,9 @@
         overflow: hidden;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
       }
 
       .blog-category-post-card:hover {
@@ -189,14 +210,18 @@
       }
 
       .blog-category-post-image {
-        width: 100%;
-        height: 200px;
+        width: 300px;
+        height: auto;
         object-fit: cover;
-        background: #7140FF;
+        flex-shrink: 0;
       }
 
       .blog-category-post-content {
         padding: 25px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
 
       .blog-category-post-meta {
@@ -217,7 +242,7 @@
       }
 
       .blog-category-post-title {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         font-weight: 600;
         color: #333;
         margin-bottom: 15px;
@@ -251,6 +276,7 @@
         background: #f3f4f6;
         color: #666;
         padding: 4px 10px;
+        border-radius: 15px;
         font-size: 0.8rem;
       }
 
@@ -278,6 +304,7 @@
 
       .blog-category-empty {
         background: white;
+        border-radius: 12px;
         padding: 60px 40px;
         text-align: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -296,9 +323,10 @@
 
       .blog-category-empty-button {
         display: inline-block;
-        background: #7140FF;
+        background: linear-gradient(135deg, #7140FF 0%, #12D0EE 100%);
         color: white;
         padding: 12px 24px;
+        border-radius: 8px;
         text-decoration: none;
         font-weight: 600;
         transition: opacity 0.3s ease;
@@ -327,43 +355,86 @@
           gap: 20px;
         }
       }
+
+      .blog-categories-nav {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+        flex-wrap: wrap;
+        max-width: 1024px;
+        margin: 0 auto;
+      }
+
+      .category-nav-item {
+        padding: 10px 20px;
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: all 0.3s ease;
+
+        font-size: 1rem;
+      }
+
+      .category-nav-item.active {
+        background: #FF6B35;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+
+      .category-nav-item:not(.active) {
+        background: #A886FA;
+      }
+
+      .category-nav-item:not(.active):hover {
+        background: rgba(255, 107, 53, 0.8);
+      }
+
+      @media (max-width: 600px) {
+        .blog-categories-nav {
+          gap: 10px;
+          padding: 15px 0;
+        }
+        
+        .category-nav-item {
+          padding: 8px 16px;
+          font-size: 0.9rem;
+        }
+        
+        .category-nav-item.active {
+          font-size: 1rem;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="blog-category-container">
       <!-- Header -->
       <header class="blog-category-header">
-        <h1 id="categoryTitle">Blog Category</h1>
-        <p id="categoryDescription">Browse articles by category</p>
-      </header>
-
-      <!-- Navigation -->
+              <!-- Navigation -->
       <nav class="blog-category-nav">
         <div class="blog-category-nav-content">
-          <a href="index.html" class="blog-category-logo">
-            <img src="logo.png" alt="Hive of Thinkrs" />
-            Hive of Thinkrs
-          </a>
           <div class="blog-category-nav-links">
-            <a href="index.html">Home</a>
-            <a href="blog.html">Blog</a>
-            <a href="faq.html">FAQ</a>
+            <a href="blog.html">Thinkr Learning Hub</a>
           </div>
         </div>
       </nav>
-
-      <!-- Breadcrumb -->
-      <div class="blog-category-breadcrumb">
-        <div class="blog-category-breadcrumb-content">
-          <nav class="breadcrumb">
-            <a href="index.html">Home</a>
-            <span class="breadcrumb-separator">›</span>
-            <a href="blog.html">Blog</a>
-            <span class="breadcrumb-separator">›</span>
-            <span id="breadcrumbTitle">Loading...</span>
+      <!-- Category Navigation -->
+      <div class="blog-category-nav-container">
+        <div class="blog-category-nav-wrapper">
+          <nav class="blog-categories-nav" id="categoriesNav">
+            <!-- Categories will be dynamically loaded here -->
           </nav>
         </div>
       </div>
+      <div class="blog-category-header-content">
+        <h1 id="categoryTitle">Blog Category</h1>
+        <p id="categoryDescription">Browse articles by category</p>
+      </div>
+      </header>
+
+      
 
       <!-- Main Content -->
       <main class="blog-category-content" id="blogCategoryContent">
@@ -418,10 +489,6 @@
       function createCategoryHTML(category, posts) {
         if (posts.length === 0) {
           return `
-            <div class="blog-category-info">
-              <h2>${category.name}</h2>
-              <p>${category.description}</p>
-            </div>
             <div class="blog-category-empty">
               <h2>No articles found</h2>
               <p>There are currently no articles in this category.</p>
@@ -431,10 +498,6 @@
         }
 
         return `
-          <div class="blog-category-info">
-            <h2>${category.name}</h2>
-            <p>${category.description}</p>
-          </div>
           <div class="blog-category-posts">
             ${posts.map(post => createCategoryPostCard(post)).join('')}
           </div>
@@ -449,6 +512,19 @@
             <a href="blog.html" class="blog-category-empty-button">Back to Blog</a>
           </div>
         `;
+      }
+
+      function createCategoriesNav(currentCategorySlug) {
+        return categories
+          .filter(category => category.slug !== currentCategorySlug)
+          .map(category => {
+            return `
+              <a href="blog-category.html?category=${category.slug}" 
+                 class="category-nav-item">
+                ${category.name}
+              </a>
+            `;
+          }).join('');
       }
 
       // Initialize blog category page
@@ -477,7 +553,10 @@
         document.getElementById('pageDescription').content = category.description;
         document.getElementById('categoryTitle').textContent = category.name;
         document.getElementById('categoryDescription').textContent = category.description;
-        document.getElementById('breadcrumbTitle').textContent = category.name;
+
+        // Load category navigation
+        const navContainer = document.getElementById('categoriesNav');
+        navContainer.innerHTML = createCategoriesNav(categorySlug);
 
         // Load category content
         const contentContainer = document.getElementById('blogCategoryContent');
