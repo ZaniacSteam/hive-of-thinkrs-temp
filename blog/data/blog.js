@@ -58,7 +58,7 @@ Whether your child is just beginning their STEM journey or ready to advance thei
     publishDate: "2025-01-14",
     category: "STEM Education",
     tags: ["STEM", "Miami Education", "Future Skills", "Technology"],
-    featuredImage: "blog/images/engineering.webp",
+    featuredImage: "blog/data/images/engineering.webp",
     seo: {
       metaTitle: "Why STEM Education is Critical for Miami's Future | Hive of Thinkrs",
       metaDescription: "Discover how STEM education prepares Miami students for tomorrow's careers. Learn about coding, robotics, and math programs for K-12 students.",
@@ -146,7 +146,7 @@ Whether your child is a Minecraft expert or complete beginner, our programs meet
     publishDate: "2025-01-10",
     category: "Educational Technology",
     tags: ["Minecraft", "Game-Based Learning", "STEM", "Educational Technology"],
-    featuredImage: "blog/images/minecraft.webp",
+    featuredImage: "blog/data/images/minecraft.webp",
     seo: {
       metaTitle: "Educational Benefits of Minecraft for Learning | Hive of Thinkrs",
       metaDescription: "Discover how Minecraft teaches math, science, architecture, and programming. Learn about our educational Minecraft programs for K-12 students.",
@@ -302,7 +302,7 @@ The best time to start coding education is now. Whether your child is 5 or 15, t
     publishDate: "2025-01-05",
     category: "Coding Education",
     tags: ["Coding for Kids", "Programming Education", "Parent Guide", "STEM Learning"],
-    featuredImage: "blog/images/coding.webp",
+    featuredImage: "blog/data/images/coding.webp",
     seo: {
       metaTitle: "Parent's Guide to Coding Education: From Scratch to Python | Hive of Thinkrs",
       metaDescription: "Learn the progression from visual coding to professional programming. Discover the best coding pathway for your child's age and skill level.",
